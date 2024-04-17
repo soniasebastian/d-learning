@@ -34,6 +34,42 @@ create applications
 actual code/index function /rendering an html file/placed in a template/content gets served
 
 
+from dockerfile........>
+
+ubuntu base image
+
+workdir.../app....
+for conatainerization........>requirements.text..python dependencies (django and tzdata)
+devops/app...source code itself
+
+both forms bundle/binary of application
+
+
+execution fails as its ubuntu
+
+we need python to install
+
+RUN apt-get update.....python3 python-3-pip..pip install
+
+      ENTRYPOINT and CMD in dcker container difference
+execute as a start comand
+
+     ENTRYPOINT ["python3"]
+   CMD["manage.py", "runserver", "0.0.0.0:8000"]
+
+
+   entrypoint cant be changed.....main executable in entrypoint..(cant change to node.js) ...non-overridable values
+   http server remain same...parameters passing changes...passs more valuess...congigurable field that is CMD
+
+   IF 8000 IS OCCUPIED....CAN BE CHANGED CMD
+
+   
+
+
+
+
+
+
 
 
 
