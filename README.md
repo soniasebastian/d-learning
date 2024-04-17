@@ -171,6 +171,8 @@ You can create an Ubuntu EC2 Instance on AWS and run the below commands to insta
 ```
 sudo apt update
 sudo apt install docker.io -y
+history
+sudo systemctl status docker
 ```
 
 
