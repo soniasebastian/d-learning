@@ -328,6 +328,8 @@ You need to change the username accoringly in the below command
 
 ```
 docker build -t soniasebastian/my-first-docker-image:latest .
+
+docker run -it soniasebastian/my-first-docker-image:latest
 ```
 
 Output of the above command
@@ -357,7 +359,9 @@ Output of the above command
     Removing intermediate container 5d60ad3a59ff
      ---> 960d37536dcd
     Successfully built 960d37536dcd
-    Successfully tagged abhishekf5/my-first-docker-image:latest
+    Successfully tagged soniasebastian/my-first-docker-image:latest
+
+Helloworld
 ```
 
 ### Verify Docker Image is created
