@@ -373,16 +373,16 @@ docker images
 Output 
 
 ```
-REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
-abhishekf5/my-first-docker-image   latest    960d37536dcd   26 seconds ago   467MB
-ubuntu                             latest    58db3edaf2be   13 days ago      77.8MB
-hello-world                        latest    feb5d9fea6a5   16 months ago    13.3kB
+REPOSITORY                             TAG       IMAGE ID       CREATED          SIZE
+soniasebastian/my-first-docker-image   latest    007fc8cbab4f   10 minutes ago   476MB
+ubuntu                                 latest    7af9ba4f0a47   7 days ago       77.9MB
+hello-world                            latest    d2c94e258dcb   11 months ago    13.3kB
 ```
 
 ### Run your First Docker Container
 
 ```
-docker run -it abhishekf5/my-first-docker-image
+docker run -it soniasebastian/my-first-docker-image
 ```
 
 Output
@@ -390,11 +390,17 @@ Output
 ```
 Hello World
 ```
+### login to docker hub
+```
+username
+password
+```
+
 
 ### Push the Image to DockerHub and share it with the world
 
 ```
-docker push abhishekf5/my-first-docker-image
+docker push soniasebastian/my-first-docker-image
 ```
 
 Output
