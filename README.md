@@ -255,6 +255,54 @@ This message shows that your installation appears to be working correctly.
 ```
 git clone https://github.com/iam-veeramalla/Docker-Zero-to-Hero
 cd  examples
+    1  sudo apt update -y
+    2  sudo apt install docker.io -y
+    3  history
+    4  sudo systemctl status docker
+    5  clear
+    6  docker run hello-world
+    7  sudo usermod -aG docker ubuntu
+    8  docker run hello-world
+    9  logout
+   10  docker run hello-world
+   11  source 
+   12  clear
+   13  sudo systemctl status docker
+   14  clear
+   15  git clone https://github.com/soniasebastian/docker-learning.git
+   16  cd docker-learning/
+   17  ls
+   18  cd exampl
+   19  cd examples
+   20  ls
+   21  cat app.py
+   22  cd first-docker-file/
+   23  ls
+   24  cat app.py
+   25  vim Docker
+   26  cd docker-learning/
+   27  cd examples
+   28  cd first-docker-file/
+   29  ls
+   30  vim Dockerfile
+   31  history
+
+FROM ubuntu:latest
+
+# Set the working directory in the image
+WORKDIR /app
+
+# Copy the files from the host file system to the image file system
+COPY . /app
+
+# Install the necessary packages
+RUN apt-get update && apt-get install -y python3 python3-pip
+
+# Set environment variables
+ENV NAME World
+
+# Run a command to start the application
+CMD ["python3", "app.py"]
 ```
 
 ### Login to Docker [Create an account with https://hub.docker.com/]
