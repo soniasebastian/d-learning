@@ -407,12 +407,11 @@ Output
 
 ```
 Using default tag: latest
-The push refers to repository [docker.io/abhishekf5/my-first-docker-image]
-896818320e80: Pushed
-b8088c305a52: Pushed
-69dd4ccec1a0: Pushed
-c5ff2d88f679: Mounted from library/ubuntu
-latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb8221b1d88 size: 1157
+02ca54d93dac: Pushed 
+60e408afb927: Pushed 
+12f5d280d655: Pushed 
+e0a9f5911802: Mounted from library/ubuntu 
+latest: digest: sha256:1a985885d140b3878c27ae03c27e7b3115e6665c40aad281c35f68e96d7e459e size: 1156
 ```
 
-### You must be feeling like a champ already 
+### My First Docker Image 😊
