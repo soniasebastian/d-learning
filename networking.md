@@ -89,3 +89,55 @@ This mode enables communication between containers across multiple Docker host m
 
 This mode allows a container to appear on the network as a physical host rather than as a container.
 
+CLASS EXPLANATION
+....................
+
+VM = OS+ application
+container = lightweighted without mini os less packages
+
+subnet = networking group..
+
+        TWO CASES...................
+
+2 containers have to communicate frontend and backend....
+(1) ASSOCIATION AND (front end and backend)
+(2) LOGICAL ISOLATION  (login and finance containers)
+
+eth0:192.16.3.4 network in host 
+container app 172.17.0.2
+
+separate networks
+
+              networking error when conatiner ping to host
+
+            docker created a virtualETH/ network ....[DOCKER 0].....
+1. Bridge networking (default networking)
+    OOTB networking can be solved.
+   Docker allows to create custom bridge network......instead of going throigh same path we can split networks..
+container 1 (login) Veth and Docker 0 
+conatiner 2 (logout) veth and docker 0
+container 3 (finance/payments)  secure  .....custom bridge network./virtual bridge network............using docker network command...
+docker run --network
+
+
+
+     DOCKER OFFERS MULTIPLE NETWORKING OPTIONS
+
+     
+3. HOST NETWORKING
+    Docker will directly bind with eth0 of host...
+    192.16.3.4
+    192.16.3.6
+    docker and host networking is same...problematic approach
+
+    Container is secure in nature.....
+
+
+
+4. OVERLAY NETWORKING (Conatiner orchestration engines)
+   Kubernetes
+   docker swarm
+
+   same docker 0 then common path for hacker.....out of the BOX  [00TB] bridge networking........V(eth) 
+   
+
