@@ -100,6 +100,11 @@ NO OS RELATED VULNERABILITILES
 SO DISTROLESS IMAGES NO VULNERABILITIES....NO EXPOSURE TO SECURITY THREATS
 
 
+https://github.com/GoogleContainerTools/distroless/blob/main/java/README.md 
+   for getting java distroless image
+   
+
+
 
 
 
