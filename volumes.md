@@ -377,3 +377,13 @@ $ docker inspect 120a02ba807f
         }
     }
 ]
+
+
+
+Delete volume.....
+
+docker volume rm sonia
+Error response from daemon: remove sonia: volume is in use - [120a02ba807fff2e72a676a6623cb63a80bacd8d2ab0953cd59faad1a0f68394]
+
+stop container/delete container then delete volume........
+
