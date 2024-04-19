@@ -188,5 +188,25 @@ d73c1d6a7bc1   nginx:latest   "/docker-entrypoint.…"   4 seconds ago    Up 3 s
 DOCKER DIDNTOT CREATE ANY VIRTUAL NETWORK..DIRECTLY BIND WITH HOST NETWORKING
 
    same docker 0 then common path for hacker.....out of the BOX  [00TB] bridge networking........V(eth) 
+
+
+              docker inspect host-demo
+              
+   works": {
+                "host": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "36783b67f808d22aafc2c3fa32d482e9cb4626feb00ce9645fd717097b42b911",
+                    "EndpointID": "24c0248ab4fdf32aeae03ce597ed7c4684f17dbe26912a466976513e51c88ee6",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "",
+                    "DriverOpts": null
+                }
    
 
