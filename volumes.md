@@ -58,3 +58,48 @@ they can be managed and backed up separately from the host file system, and can 
 In a nutshell, Bind Directory on a host as a Mount are appropriate for simple use cases where you need to mount a directory from the host file system into
 a container, while volumes are better suited for more complex use cases where you need more control over the data being persisted
 in the container.
+
+
+CLASS EXPLANATION
+
+PROBLEM 1 : container...ngnix.application inside container..puts user information/ip address accessed.....ngnix stores in logfile.....security auditing ....
+last 10 days information.....
+container goes down.....log file gets deleted ...conatiners are ephemeral in nature/shortlived/light-weighted
+cpu/memory/storage/file system used from kernal/host system
+user details/log file gets deleted org doesnt have any information to track user detals/etc.
+
+
+PROBLEM2: There is frontend and backend (flipkart)...filein Json/dynamic html served by frontend..
+backend goes down....you didnt have Persistent file storage...entire informn...frontend can only read today records....
+
+PROBLEM3: One application reads files provided from cron job (periodical job) on host...files created..json/yaml/xml container reads file and display to user..
+conainer can access CPU/RMA/RESOURCES FROM HOST OS no std way specific directory/folders
+
+TWO SOLUTIONS
+1.BIND MOUNTS
+2. VOLUMES
+
+1. Bind mounts binds folder/dir on container with a folder on the host .../app in both....
+   any file on host can be read from host....
+
+   binding specific directory/folder on the host to ones in the conatiners..
+
+2. Volumes...OFFER BETTER Lifecycle...USING VOLUMES USING Docker CLI....COMMANDS create volumes///logical partition
+   create vol/destroy vol/taake one vol from C1 to C2
+
+   not providing directory details
+   but asks docker to crate a specific volume
+   df....disk.....logical vol
+
+
+   managing entire thing using a Lifecycle
+
+   advantage of using volumes....bind one dir from host to container....external sources.....
+   Host doesnt have enough disk...Back-up safe....mount using external storage devices
+   share infor from one container to next
+   high performance...
+   high I/O 
+   
+
+
+
