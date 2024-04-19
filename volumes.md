@@ -99,7 +99,15 @@ TWO SOLUTIONS
    share infor from one container to next
    high performance...
    high I/O 
+
+
+        docker -v
+   (attach volume,,pass all in same command)
    
+      docker --mount
+   (verbose.....more options passed)...specific and simple
+
+   both are same....
 
 
 
