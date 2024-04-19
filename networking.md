@@ -138,6 +138,55 @@ docker run --network
    Kubernetes
    docker swarm
 
+class for creating virtual eth0 and login/logout conatiners COMMANDS
+
+   1  docker login
+   2  docker run -d --name login nginx:latest
+   3 docker exec -it login /bin/bash
+   4  apt update
+   5 apt-get install iputils-ping -y
+   6 ping -V
+     docker run -d --name logout nginx:latest
+   7 docker ps
+   8 docker inspect login
+   9 docker inspect logout
+
+       To show networks  host/login/logout
+docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+298b967d3bce   bridge    bridge    local
+36783b67f808   host      host      local
+81b0e6332829   none      null      local
+
+      To remove networks
+docker network rm test
+
+creation of brige network
+   docker network create secure-network
+   docker network ls
+   ETWORK ID     NAME             DRIVER    SCOPE
+298b967d3bce   bridge           bridge    local
+36783b67f808   host             host      local
+81b0e6332829   none             null      local
+
+          SECURE NETWORK
+docker run -d --name finance  --network=secure-network  nginx:latest
+docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS     NAMES
+2b0282f8c652   nginx:latest   "/docker-entrypoint.…"   17 seconds ago   Up 16 seconds   80/tcp    finance
+60133b63239d   nginx:latest   "/docker-entrypoint.…"   17 minutes ago   Up 17 minutes   80/tcp    logout
+73c34c909c1b   nginx:latest   "/docker-entrypoint.…"   36 minutes ago   Up 35 minutes   80/tcp    login
+
+          HOST NETWORKING
+$ docker run -d --name host-demo --network=host  nginx:latest
+ONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS     NAMES
+d73c1d6a7bc1   nginx:latest   "/docker-entrypoint.…"   4 seconds ago    Up 3 seconds              host-demo
+2b0282f8c652   nginx:latest   "/docker-entrypoint.…"   4 minutes ago    Up 4 minutes    80/tcp    finance
+60133b63239d   nginx:latest   "/docker-entrypoint.…"   21 minutes ago   Up 21 minutes   80/tcp    logout
+73c34c909c1b   nginx:latest   "/docker-entrypoint.…"   40 minutes ago   Up 40 minutes   80/tcp    login
+
+DOCKER DIDNTOT CREATE ANY VIRTUAL NETWORK..DIRECTLY BIND WITH HOST NETWORKING
+
    same docker 0 then common path for hacker.....out of the BOX  [00TB] bridge networking........V(eth) 
    
 
